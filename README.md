@@ -1,0 +1,2 @@
+# si-stt-yowana-sakti
+SISTEM INFORMASI STT YOWANA SAKTI
