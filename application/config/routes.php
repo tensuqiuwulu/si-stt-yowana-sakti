@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------------
@@ -49,6 +49,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'welcome';
+$route['default_controller'] = 'auth/form_login';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+// Login
+$route['auth/login'] = 'auth/login';
+$route['dashboard'] = 'dashboard';
+
+// Admin
+$route['admin'] = 'admin';
+$route['admin/tambah'] = 'admin/form_tambah';
+$route['admin/save'] = 'admin/save';
+$route['admin/edit/(:any)'] = 'admin/form_edit/$1';
+$route['admin/update/(:any)'] = 'admin/update/$1';
+
+// Anggota
+$route['anggota'] = 'anggota';
+$route['anggota/tambah'] = 'anggota/form_tambah';
+$route['anggota/save'] = 'anggota/save';
+$route['anggota/edit/(:any)'] = 'anggota/form_edit/$1';
+$route['anggota/update/(:any)'] = 'anggota/update/$1';
+
+// Kegiatan
+$route['kegiatan'] = 'kegiatan';
+$route['kegiatan/tambah'] = 'kegiatan/form_tambah';
+$route['kegiatan/save'] = 'kegiatan/save';
+$route['kegiatan/edit/(:any)'] = 'kegiatan/form_edit/$1';
+$route['kegiatan/update/(:any)'] = 'kegiatan/update/$1';
+$route['kegiatan/delete/(:any)'] = 'kegiatan/delete/$1';
+$route['kegiatan/dokumentasi/(:any)'] = 'kegiatan/dokumentasi/$1';
